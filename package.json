@@ -1,0 +1,36 @@
+{
+  "name": "knowledge",
+  "version": "1.0.0",
+  "description": "database design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zhangxiang",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "css-loader": "^0.26.0",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-webpack": "^1.5.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vinyl-named": "^1.1.0",
+    "vue": "^2.1.0",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^10.0.0",
+    "vue-resource": "^1.0.3",
+    "vue-router": "^2.0.3",
+    "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.1.0",
+    "vuex": "^2.0.0",
+    "webpack": "^1.13.3"
+  }
+}
