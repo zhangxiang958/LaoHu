@@ -56,7 +56,7 @@
 	    -webkit-font-smoothing: antialiased;
 	}
 	.icon-beer:before {
-		content: "CSCWFE";
+		content: "ADMIN";
     	display: inline-block;
 		text-decoration: inherit;
     	cursor: default;
@@ -130,7 +130,7 @@
 			<div class="logo-icon">
                 <i class="icon-beer"></i>
               </div>
-			<h3>BlogWall</h3>
+			<h3>LaoHu</h3>
 		</div>
 		<div class="login-row">
 			<h5>Login to Your Account</h5>
