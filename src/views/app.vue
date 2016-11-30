@@ -1,22 +1,36 @@
 <style>
-	.testCss {
-		color: #f00;
-	}
+
 </style>
 
 <template>
-	<div class="testCss">
-		djaskldjskadjksladjs
+	<div>
 		{{message}}
+		<mdl-button @click.native="testMdl">asdjakl</mdl-button>
+		
 	</div>
 </template>
 
 <script>
-	module.exports = {
-		data: function(){
+	export default {
+		created() {
+			console.log("created");
+		},
+		mounted() {
+			console.log("mounted");
+			console.log(this.$el);
+		},
+		data() {
 			return {
-				message: 'Hello world'
+				message: 'Hello World'
 			}
+		},
+		methods: {
+			testMdl() {
+				alert("mdl");
+			}
+		},
+		components: {
+			
 		}
 	}
 </script>

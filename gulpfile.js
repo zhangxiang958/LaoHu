@@ -8,11 +8,10 @@
 
 var gulp = require('gulp');
 var webpack = require('gulp-webpack');
+var Webpack = require('webpack');
 var named = require('vinyl-named');
 var connect = require('gulp-connect');
 var uglify = require('gulp-uglify');
-// var rev = require('gulp-rev');
-// var revCollector = require('gulp-rev-collector');
 
 gulp.task('connect', function(){
 	connect.server({
@@ -28,6 +27,15 @@ gulp.task('bundle', function(){
 	return gulp.src(mapFiles(appList, 'js'))
 				.pipe(named())
 				.pipe(webpack({
+					entry: {
+				        "index": "./src/app.js"
+				    },
+				    output: {
+				    	path: __dirname + '/lib',
+				        filename: "app.js",
+				        chunkFilename: "[name].js",
+				        publicPath:  './lib/'
+				    },
 					module: {
 						loaders: [{
 							test: /\.vue$/,
@@ -47,25 +55,19 @@ gulp.task('bundle', function(){
 					resolve: {
     					alias: {vue: 'vue/dist/vue.js'}
   					},
+  					babel: {
+				    	presets: ['es2015'],
+				    	plugins: ['transform-runtime']
+				  	},
+				  	plugins: [
+    					new Webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+  					],
 					watch: true
 				}))
 				// .pipe(uglify())
-				// .pipe(rev())
         		.pipe(gulp.dest('src/lib/'))
-				// .pipe(rev.manifest({
-				// 	base: 'src/lib',
-				// 	merge: true
-				// }))
-				// .pipe(gulp.dest('./rev'))
 				.pipe(connect.reload());
 });
-
-// gulp.task('rev', function() {
-//     gulp.src(['./rev/rev-manifest.json', './src/index.html'])   //- 读取 rev-manifest.json 文件以及需要进行css名替换的文件
-//         .pipe(revCollector())                                   //- 执行文件内css名的替换
-//         .pipe(gulp.dest('./src'));                     //- 替换后的文件输出的目录
-// });
-
 
 gulp.task('uglify', function() {
     return gulp.src(['src/lib/js/fastclick.js'])

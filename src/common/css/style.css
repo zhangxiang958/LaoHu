@@ -1,4 +1,4 @@
-/**************************************************
+*************************************************
 说明：
 1：我们建议你通过只改变css的方式来制作新的皮肤模板。当然，页面的部分代
 码你也是可以更改的，例如一些图片的地址。但是，请你在递交作品的时候，请同时
@@ -86,8 +86,8 @@ html {
 body {
     color: #000000;
     background: #CFD8DD;
-    font-family: '文泉驿微米黑', 'Noto Sans CJK SC', 'Segoe UI', sans-serif;
-    font-size: 16px;
+    font-family: '文泉驿微米黑', 'Noto Sans CJK SC', 'Segoe UI', sans-serif !important;
+    font-size: 16px !important;
 }
 
 table {
@@ -944,4 +944,4 @@ legend > a::before {
 }
 
 
-/*****第五部分结束*******************************/
+/*****第五部分结束******************************
