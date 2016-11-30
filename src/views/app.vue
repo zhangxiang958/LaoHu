@@ -5,6 +5,7 @@
 <template>
 	<div>
 		{{message}}
+		{{count}}
 		<mdl-button @click.native="testMdl">asdjakl</mdl-button>
 		
 	</div>
@@ -21,12 +22,21 @@
 		},
 		data() {
 			return {
-				message: 'Hello World'
+				message: 'Hello World',
+				count: 0
+			}
+		},
+		computed: {
+			count() {
+				return this.$store.state.count
 			}
 		},
 		methods: {
+
 			testMdl() {
 				alert("mdl");
+				console.log(this.$store);
+				this.$store.commit('increment');
 			}
 		},
 		components: {

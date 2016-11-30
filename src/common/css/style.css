@@ -133,7 +133,8 @@ a:visited {
 }
 
 a:hover {
-    color: #F60;
+    // color: #F60;
+    color: #1abc9c;
     text-decoration: none;
 }
 

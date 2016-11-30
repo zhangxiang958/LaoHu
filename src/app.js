@@ -2,6 +2,8 @@ import Vue 			from 'vue';
 import VueRouter 	from 'vue-router';
 import VueResource 	from 'vue-resource';
 import VueMdl   	from 'vue-mdl';
+
+import store		from './vuex/store';
 import routers 		from './router';
 
 Vue.use(VueRouter);
@@ -13,7 +15,6 @@ const router = new VueRouter({
 	base: __dirname,
 	routes: routers
 });
-
 
 // router.beforeEach(({meta, path}, from, next) => {
 //     // var {auth = true} = meta
@@ -27,5 +28,6 @@ const router = new VueRouter({
 // });
 
 const app = new Vue({
+	store,
 	router
 }).$mount('#app');
