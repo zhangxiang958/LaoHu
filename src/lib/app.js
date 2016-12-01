@@ -17081,7 +17081,7 @@ webpackJsonp([0,2],[
 /* 33 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -17099,20 +17099,83 @@ webpackJsonp([0,2],[
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 		created: function created() {
 			console.log("created");
-			this.$http.get('http://localhost:18081', {
-				body: {
-					test: '123123'
-				}
-			}).then(function (response) {
-				console.log("fuck");
-				console.log(response);
-				console.log(response.data);
-				console.log(response.data.test);
-			});
 		},
 		mounted: function mounted() {
 			console.log("mounted");
@@ -17145,14 +17208,181 @@ webpackJsonp([0,2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', ["\n\t" + _vm._s(_vm.message) + "\n\t" + _vm._s(_vm.count) + "\n\t", _vm._h('mdl-button', {
+	  return _vm._h('div', ["\n\t\t" + _vm._s(_vm.message) + "\n\t\t" + _vm._s(_vm.count) + "\n\t\t", _vm._h('mdl-button', {
 	    nativeOn: {
 	      "click": function($event) {
 	        _vm.testMdl($event)
 	      }
 	    }
-	  }, ["asdjakl"])])
-	},staticRenderFns: []}
+	  }, ["asdjakl"]), " ", _vm._m(0)])
+	},staticRenderFns: [function (){var _vm=this;
+	  return _vm._h('div', {
+	    attrs: {
+	      "id": "wrapper"
+	    }
+	  }, [_vm._h('section', {
+	    attrs: {
+	      "id": "sidebar"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-align-justify icon-large",
+	    attrs: {
+	      "id": "toggle"
+	    }
+	  }), " ", _vm._h('ul', {
+	    attrs: {
+	      "id": "dock"
+	    }
+	  }, [_vm._h('li', {
+	    staticClass: "launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-dashboard"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "dashboard.html"
+	    }
+	  }, ["Dashboard"])]), " ", _vm._h('li', {
+	    staticClass: "launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-file-text-alt"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "forms.html"
+	    }
+	  }, ["Forms"])]), " ", _vm._h('li', {
+	    staticClass: "active launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-table"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "tables.html"
+	    }
+	  }, ["Tables"])]), " ", _vm._h('li', {
+	    staticClass: "launcher dropdown hover"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-flag"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Reports"]), " ", _vm._h('ul', {
+	    staticClass: "dropdown-menu"
+	  }, [_vm._h('li', {
+	    staticClass: "dropdown-header"
+	  }, ["Launcher description"]), " ", _vm._h('li', [_vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Action"])]), " ", _vm._h('li', [_vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Another action"])]), " ", _vm._h('li', [_vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Something else here"])])])]), " ", _vm._h('li', {
+	    staticClass: "launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-bookmark"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Bookmarks"])]), " ", _vm._h('li', {
+	    staticClass: "launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-cloud"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Backup"])]), " ", _vm._h('li', {
+	    staticClass: "launcher"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-bug"
+	  }), " ", _vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Feedback"])])]), " ", _vm._h('div', {
+	    attrs: {
+	      "data-toggle": "tooltip",
+	      "id": "beaker",
+	      "title": "",
+	      "data-original-title": "Made by lab2023"
+	    }
+	  })]), " ", _vm._h('section', {
+	    attrs: {
+	      "id": "tools"
+	    }
+	  }, [_vm._h('ul', {
+	    staticClass: "breadcrumb",
+	    attrs: {
+	      "id": "breadcrumb"
+	    }
+	  }, [_vm._h('li', {
+	    staticClass: "title"
+	  }, ["Tables"]), " ", _vm._h('li', [_vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["Lorem"])]), " ", _vm._h('li', {
+	    staticClass: "active"
+	  }, [_vm._h('a', {
+	    attrs: {
+	      "href": "#"
+	    }
+	  }, ["ipsum"])])]), " ", _vm._h('div', {
+	    attrs: {
+	      "id": "toolbar"
+	    }
+	  }, [_vm._h('div', {
+	    staticClass: "btn-group"
+	  }, [_vm._h('a', {
+	    staticClass: "btn",
+	    attrs: {
+	      "data-toggle": "toolbar-tooltip",
+	      "href": "#",
+	      "title": "",
+	      "data-original-title": "Building"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-building"
+	  })]), " ", _vm._h('a', {
+	    staticClass: "btn",
+	    attrs: {
+	      "data-toggle": "toolbar-tooltip",
+	      "href": "#",
+	      "title": "",
+	      "data-original-title": "Laptop"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-laptop"
+	  })]), " ", _vm._h('a', {
+	    staticClass: "btn",
+	    attrs: {
+	      "data-toggle": "toolbar-tooltip",
+	      "href": "#",
+	      "title": "",
+	      "data-original-title": "Calendar"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-calendar"
+	  }), " ", _vm._h('span', {
+	    staticClass: "badge"
+	  }, ["3"])]), " ", _vm._h('a', {
+	    staticClass: "btn",
+	    attrs: {
+	      "data-toggle": "toolbar-tooltip",
+	      "href": "#",
+	      "title": "",
+	      "data-original-title": "Lemon"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-lemon"
+	  })])])])])])
+	}]}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
