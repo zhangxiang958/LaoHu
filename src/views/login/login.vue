@@ -137,10 +137,10 @@
 			<form class="form-container">
 	            <fieldset>
 	              <div class="form-wrapper">
-	                <input class="form-control" placeholder="Account" type="text">
+	                <input class="form-control" placeholder="Account" type="text" v-model="accounts">
 	              </div>
 	              <div class="form-wrapper">
-	                <input class="form-control" placeholder="Password" type="password">
+	                <input class="form-control" placeholder="Password" type="password" v-model="password">
 	              </div>
 	              <div>
 	                <div class="checkbox">
@@ -149,7 +149,7 @@
 	                    Remember me on this computer
 	                  </label>
 	                </div>
-	                <a class="sign">Sign in</a>
+	                <a class="sign" @click="SignIn">Sign in</a>
 	                <br>
 	                <a>Forgot password?</a>
 	              </div>
@@ -161,6 +161,8 @@
 </template>
 
 <script>
+	import Utility from 'utility';
+
 	export default {
 		created() {
 			
@@ -170,7 +172,33 @@
 		},
 		data() {
 			return {
-
+				accounts: '',
+				password: ''
+			}
+		},
+		methods: {
+			SignIn: function(){
+				console.log(this.accounts);
+				console.log(this.password);
+				var that = this;
+				if(!this.accounts || !this.password) {
+					return;
+				} else {
+					var body = {
+						'accounts': this.accounts,
+						'password': Utility.md5(this.password)
+					};
+					this.$http.post('http://localhost:18081/api/admin', body,
+						{
+							emulateJSON: true
+						}).then(function(response){
+							console.log(response.data);
+							console.log(response.data.code);
+							that.$store.commit('USER_SIGININ', response.data);
+							that.$router.replace({ path: '/' });
+					});
+				}
+				
 			}
 		},
 		components: {

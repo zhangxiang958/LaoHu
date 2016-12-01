@@ -3,6 +3,7 @@ import Vuex 		from 'vuex';
 // import actions 		from './actions'
 // import mutations 	from './mutations'
 // import state 		from "./state"
+import user			from './modules/User';
 
 Vue.use(Vuex);
 // const debug = process.env.NODE_ENV !== 'production'
@@ -23,5 +24,9 @@ export default new Vuex.Store({
     		console.log(state.count);
     	},
     	decrement: state => state.count --
+    },
+
+    modules: {
+    	user: user
     }
 })

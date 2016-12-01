@@ -15,6 +15,16 @@
 	export default {
 		created() {
 			console.log("created");
+			this.$http.get('http://localhost:18081', {
+				body: {
+					test: '123123'
+				}
+			}).then(function(response){
+				console.log("fuck");
+				console.log(response);
+				console.log(response.data);
+				console.log(response.data.test);
+			});
 		},
 		mounted() {
 			console.log("mounted");
