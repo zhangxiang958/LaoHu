@@ -69,7 +69,7 @@
 		text-align: center;
 	}
 	.form-wrapper {
-		width: 90%;
+		width: 100%;
 	}
 	.form-control {
 		display: block;
@@ -113,14 +113,17 @@
 	    -ms-user-select: none;
 	    user-select: none;
 	}
-	.checkbox {
-		display: inline-block;
-    	max-width: 100%;
-    	margin-bottom: 15px;
-		padding-left: 20px;
+	.forgot {
+		color: #222;
+	}
+	.forgot:hover {
+		color: #1abc9c;
+		cursor: pointer;
+	}
+	.login-message {
+		height: 25px;
 		font-size: 14px;
-    	font-weight: normal;
-    	cursor: pointer;
+		color: #ff4081;
 	}
 </style>
 
@@ -135,6 +138,9 @@
 		<div class="login-row">
 			<h5>Login to Your Account</h5>
 			<form class="form-container">
+				<div class="login-message">
+					{{ loginMessage }}
+				</div>
 	            <fieldset>
 	              <div class="form-wrapper">
 	                <input class="form-control" placeholder="Account" type="text" v-model="accounts">
@@ -145,13 +151,12 @@
 	              <div>
 	                <div class="checkbox">
 	                  <label>
-	                    <input type="checkbox">
-	                    Remember me on this computer
+	                    <input type="checkbox">Remember Me on this computer
 	                  </label>
 	                </div>
 	                <a class="sign" @click="SignIn">Sign in</a>
 	                <br>
-	                <a>Forgot password?</a>
+	                <a class="forgot">Forgot Password?</a>
 	              </div>
 	            </fieldset>
           	</form>
@@ -165,7 +170,7 @@
 
 	export default {
 		created() {
-			
+			console.log(Utility.md5('123'));
 		},
 		mounted() {
 
@@ -173,7 +178,8 @@
 		data() {
 			return {
 				accounts: '',
-				password: ''
+				password: '',
+				loginMessage: ''
 			}
 		},
 		methods: {
@@ -194,8 +200,15 @@
 						}).then(function(response){
 							console.log(response.data);
 							console.log(response.data.code);
-							that.$store.commit('USER_SIGININ', response.data);
-							that.$router.replace({ path: '/' });
+							var code = response.data.code;
+							if(code === 0) {
+								that.loginMessage = '';
+								that.$store.commit('USER_SIGININ', response.data);
+								that.$router.replace({ path: '/' });
+								
+							} else {
+								that.loginMessage = '帐号或密码错误,请重新输入';
+							}
 					});
 				}
 				

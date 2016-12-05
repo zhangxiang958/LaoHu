@@ -5,7 +5,7 @@ export const SIGNOUT = 'USER_SIGINOUT';
 
 export default {
 	state: {
-		id: '',
+		id: '1',
 		accouns: ''
 	},
 	mutations: {
