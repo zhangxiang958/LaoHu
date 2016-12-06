@@ -24,10 +24,11 @@
 	        <ul id="dock">
 	          <li class="launcher">
 	            <i class="icon-dashboard"></i>
-	            <a href="">控制台</a>
+	            <router-link to="/dashboard">控制台</router-link>
 	          </li>
 	          <li class="launcher">
 	            <i class="icon-file-text-alt"></i>
+	            
 	            <a href="">Forms</a>
 	          </li>
 	          <li class="active launcher">

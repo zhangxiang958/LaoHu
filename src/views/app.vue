@@ -11,7 +11,8 @@
 		<div id="wrapper">
       	<!-- Sidebar -->
 			<Sidebar />
-			<DataTable />
+			<router-view></router-view>
+			<!-- <DataTable /> -->
     	</div>
 	</div>
 </template>
