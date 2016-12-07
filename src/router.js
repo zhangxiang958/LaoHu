@@ -16,6 +16,15 @@ const router = [
 				}
 			},
 			{
+				path: '/addData',
+				name: 'dataForm',
+				component:  function(resolve) {
+ 					require.ensure(['./views/addDataFrom/addData.vue'], function(){
+ 						resolve(require('./views/addDataFrom/addData.vue'));
+ 					}, 'DataForm');
+				}
+			},
+			{
 				path: '/admin',
 				name: 'admin',
 				component:  function(resolve) {

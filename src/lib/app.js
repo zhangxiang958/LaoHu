@@ -16699,6 +16699,14 @@ webpackJsonp([0,3],[
 				});
 			}
 		}, {
+			path: '/addData',
+			name: 'dataForm',
+			component: function component(resolve) {
+				__webpack_require__.e/* nsure */(8, function () {
+					resolve(__webpack_require__(113));
+				});
+			}
+		}, {
 			path: '/admin',
 			name: 'admin',
 			component: function component(resolve) {
@@ -16710,7 +16718,7 @@ webpackJsonp([0,3],[
 			path: '/article',
 			name: 'article',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(5/* empty */, function () {
+				__webpack_require__.e/* nsure */(5, function () {
 					resolve(__webpack_require__(98));
 				});
 			}
@@ -16718,7 +16726,7 @@ webpackJsonp([0,3],[
 			path: '/user',
 			name: 'user',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(6/* empty */, function () {
+				__webpack_require__.e/* nsure */(6, function () {
 					resolve(__webpack_require__(103));
 				});
 			}
@@ -16726,7 +16734,7 @@ webpackJsonp([0,3],[
 			path: '/comment',
 			name: 'comment',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(7/* empty */, function () {
+				__webpack_require__.e/* nsure */(7, function () {
 					resolve(__webpack_require__(108));
 				});
 			}
@@ -17381,7 +17389,6 @@ webpackJsonp([0,3],[
 	//
 	//
 	//
-	//
 
 	exports.default = {
 		data: function data() {
@@ -17416,7 +17423,15 @@ webpackJsonp([0,3],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-dashboard"
-	  }), " ", _vm._h('a', ["控制台"])]), " ", _vm._m(0), " ", _vm._h('router-link', {
+	  }), " ", _vm._h('a', ["控制台"])]), " ", _vm._h('router-link', {
+	    staticClass: "launcher",
+	    attrs: {
+	      "tag": "li",
+	      "to": "/addData"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-file-text-alt"
+	  }), " ", _vm._h('a', ["数据表单"])]), " ", _vm._h('router-link', {
 	    staticClass: "launcher",
 	    attrs: {
 	      "tag": "li",
@@ -17448,25 +17463,15 @@ webpackJsonp([0,3],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-table icon-large"
-	  }), " ", _vm._h('a', ["评论"])]), " ", _vm._m(1), " ", _vm._m(2), " ", _vm._m(3), " ", _vm._m(4)]), " ", _vm._h('div', {
+	  }), " ", _vm._h('a', ["评论"])]), " ", _vm._m(0), " ", _vm._m(1), " ", _vm._m(2), " ", _vm._m(3)]), " ", _vm._h('div', {
 	    attrs: {
 	      "data-toggle": "tooltip",
 	      "id": "beaker",
 	      "title": "",
 	      "data-original-title": "Made by lab2023"
 	    }
-	  })]), " ", _vm._m(5)])
+	  })]), " ", _vm._m(4)])
 	},staticRenderFns: [function (){var _vm=this;
-	  return _vm._h('li', {
-	    staticClass: "launcher"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-file-text-alt"
-	  }), " ", _vm._h('a', {
-	    attrs: {
-	      "href": ""
-	    }
-	  }, ["Forms"])])
-	},function (){var _vm=this;
 	  return _vm._h('li', {
 	    staticClass: "launcher dropdown hover"
 	  }, [_vm._h('i', {

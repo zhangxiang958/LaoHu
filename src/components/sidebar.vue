@@ -26,11 +26,10 @@
 	            <i class="icon-dashboard"></i>
 	            <a>控制台</a>
 	          </router-link>
-	          <li class="launcher">
+	          <router-link  tag="li" to="/addData" class="launcher">
 	            <i class="icon-file-text-alt"></i>
-	            
-	            <a href="">Forms</a>
-	          </li>
+	            <a>数据表单</a>
+	          </router-link>
 	          <router-link  tag="li" to="/admin" class="launcher">
 	            <i class="icon-table icon-large"></i>
 	            <a>管理员</a>
