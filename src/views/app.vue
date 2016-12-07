@@ -12,7 +12,6 @@
       	<!-- Sidebar -->
 			<Sidebar />
 			<router-view></router-view>
-			<!-- <DataTable /> -->
     	</div>
 	</div>
 </template>

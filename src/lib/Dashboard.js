@@ -1,19 +1,19 @@
-webpackJsonp([3,2],{
+webpackJsonp([1,3],{
 
-/***/ 88:
+/***/ 45:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* styles */
-	__webpack_require__(89)
+	__webpack_require__(46)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(91)
+	__vue_exports__ = __webpack_require__(48)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(92)
+	var __vue_template__ = __webpack_require__(49)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -48,13 +48,13 @@ webpackJsonp([3,2],{
 
 /***/ },
 
-/***/ 89:
+/***/ 46:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(90);
+	var content = __webpack_require__(47);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(32)(content, {});
@@ -75,7 +75,7 @@ webpackJsonp([3,2],{
 
 /***/ },
 
-/***/ 90:
+/***/ 47:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(31)();
@@ -83,14 +83,14 @@ webpackJsonp([3,2],{
 
 
 	// module
-	exports.push([module.id, "\n\n", ""]);
+	exports.push([module.id, "\n.dashboard-container {\n\tmargin: 15px 10px;\n\tmin-width: 300px;\n\ttext-indent: 10px;\n\tbackground-color: #cef3f5;\n\tcolor: #000;\n\tfont-weight: 900;\n\tfont-size: 30px;\n\tline-height: 80px;\n\tvertical-align: middle;\n}\n.useage-container {\n\toverflow: hidden;\n}\n.dashboard-tag {\n\tmargin-left: -15px;\n\tfloat: left;\n\twidth: 30%;\n\tbackground-color: #5ba0a3;\n\tline-height: 80px;\n\tcolor: #fff;\n\tfont-size: 20px;\n\ttext-align: center;\n\ttext-indent: 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 91:
+/***/ 48:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -108,8 +108,65 @@ webpackJsonp([3,2],{
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
+		mounted: function mounted() {},
 		data: function data() {
 			return {};
 		}
@@ -117,16 +174,40 @@ webpackJsonp([3,2],{
 
 /***/ },
 
-/***/ 92:
+/***/ 49:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
+	  return _vm._m(0)
+	},staticRenderFns: [function (){var _vm=this;
 	  return _vm._h('div', {
 	    attrs: {
 	      "id": "content"
 	    }
-	  }, ["\n\tfsjdklfjsdfkldjfkl;sdjfl;ksd;fjkl\n"])
-	},staticRenderFns: []}
+	  }, [_vm._h('div', {
+	    staticClass: "page-header"
+	  }, [_vm._h('h4', ["系统总览"])]), " ", _vm._h('div', {
+	    staticClass: "useage-container"
+	  }, [_vm._h('div', {
+	    staticClass: "col-md-5 dashboard-container"
+	  }, [_vm._h('div', {
+	    staticClass: "dashboard-tag"
+	  }, ["\n\t\t\t\t\t文章\n\t\t\t\t"]), "\n\t\t\t\t123124543\n\t\t\t"]), " ", _vm._h('div', {
+	    staticClass: "col-md-5 dashboard-container"
+	  }, [_vm._h('div', {
+	    staticClass: "dashboard-tag"
+	  }, ["\n\t\t\t\t\t评论\n\t\t\t\t"]), "\n\t\t\t\t23123123123\n\t\t\t"]), " ", _vm._h('div', {
+	    staticClass: "col-md-5 dashboard-container"
+	  }, [_vm._h('div', {
+	    staticClass: "dashboard-tag"
+	  }, ["\n\t\t\t\t\t用户\n\t\t\t\t"]), "\n\t\t\t\tasdadasdas\n\t\t\t"]), " ", _vm._h('div', {
+	    staticClass: "col-md-5 dashboard-container"
+	  }, [_vm._h('div', {
+	    staticClass: "dashboard-tag"
+	  }, ["\n\t\t\t\t\t团队\n\t\t\t\t"]), "\n\t\t\t\t1231232\n\t\t\t"])]), " ", _vm._h('div', {
+	    staticClass: "page-header"
+	  }, [_vm._h('h4', ["User statics"])])])
+	}]}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {

@@ -1,4 +1,4 @@
-webpackJsonp([0,2],[
+webpackJsonp([0,3],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -36,7 +36,8 @@ webpackJsonp([0,2],[
 
 	var router = new _vueRouter2.default({
 	  base: __dirname,
-	  routes: _router2.default
+	  routes: _router2.default,
+	  linkActiveClass: 'active'
 	});
 
 	router.beforeEach(function (_ref, from, next) {
@@ -16690,11 +16691,43 @@ webpackJsonp([0,2],[
 		name: 'index',
 		component: index,
 		children: [{
-			path: '/dashboard',
+			path: '/',
 			name: 'dashboard',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(3, function () {
-					resolve(__webpack_require__(88));
+				__webpack_require__.e/* nsure */(1, function () {
+					resolve(__webpack_require__(45));
+				});
+			}
+		}, {
+			path: '/admin',
+			name: 'admin',
+			component: function component(resolve) {
+				__webpack_require__.e/* nsure */(4, function () {
+					resolve(__webpack_require__(93));
+				});
+			}
+		}, {
+			path: '/article',
+			name: 'article',
+			component: function component(resolve) {
+				__webpack_require__.e/* nsure */(5/* empty */, function () {
+					resolve(__webpack_require__(98));
+				});
+			}
+		}, {
+			path: '/user',
+			name: 'user',
+			component: function component(resolve) {
+				__webpack_require__.e/* nsure */(6/* empty */, function () {
+					resolve(__webpack_require__(103));
+				});
+			}
+		}, {
+			path: '/comment',
+			name: 'comment',
+			component: function component(resolve) {
+				__webpack_require__.e/* nsure */(7/* empty */, function () {
+					resolve(__webpack_require__(108));
 				});
 			}
 		}]
@@ -16702,8 +16735,8 @@ webpackJsonp([0,2],[
 		path: '/login',
 		name: 'login',
 		component: function component(resolve) {
-			__webpack_require__.e/* nsure */(1, function () {
-				resolve(__webpack_require__(45));
+			__webpack_require__.e/* nsure */(2, function () {
+				resolve(__webpack_require__(50));
 			});
 		}
 	}];
@@ -17113,7 +17146,6 @@ webpackJsonp([0,2],[
 	//
 	//
 	//
-	//
 
 	exports.default = {
 		created: function created() {
@@ -17375,22 +17407,55 @@ webpackJsonp([0,2],[
 	    attrs: {
 	      "id": "dock"
 	    }
-	  }, [_vm._h('li', {
-	    staticClass: "launcher"
+	  }, [_vm._h('router-link', {
+	    staticClass: "launcher",
+	    attrs: {
+	      "tag": "li",
+	      "to": "/",
+	      "exact": ""
+	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-dashboard"
-	  }), " ", _vm._h('router-link', {
+	  }), " ", _vm._h('a', ["控制台"])]), " ", _vm._m(0), " ", _vm._h('router-link', {
+	    staticClass: "launcher",
 	    attrs: {
-	      "to": "/dashboard"
+	      "tag": "li",
+	      "to": "/admin"
 	    }
-	  }, ["控制台"])]), " ", _vm._m(0), " ", _vm._m(1), " ", _vm._m(2), " ", _vm._m(3), " ", _vm._m(4), " ", _vm._m(5), " ", _vm._m(6), " ", _vm._m(7), " ", _vm._m(8)]), " ", _vm._h('div', {
+	  }, [_vm._h('i', {
+	    staticClass: "icon-table icon-large"
+	  }), " ", _vm._h('a', ["管理员"])]), " ", _vm._h('router-link', {
+	    staticClass: "launcher",
+	    attrs: {
+	      "tag": "li",
+	      "to": "/article"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-table icon-large"
+	  }), " ", _vm._h('a', ["博文"])]), " ", _vm._h('router-link', {
+	    staticClass: "launcher",
+	    attrs: {
+	      "tag": "li",
+	      "to": "/user"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-table icon-large"
+	  }), " ", _vm._h('a', ["用户"])]), " ", _vm._h('router-link', {
+	    staticClass: "launcher",
+	    attrs: {
+	      "tag": "li",
+	      "to": "/comment"
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-table icon-large"
+	  }), " ", _vm._h('a', ["评论"])]), " ", _vm._m(1), " ", _vm._m(2), " ", _vm._m(3), " ", _vm._m(4)]), " ", _vm._h('div', {
 	    attrs: {
 	      "data-toggle": "tooltip",
 	      "id": "beaker",
 	      "title": "",
 	      "data-original-title": "Made by lab2023"
 	    }
-	  })]), " ", _vm._m(9)])
+	  })]), " ", _vm._m(5)])
 	},staticRenderFns: [function (){var _vm=this;
 	  return _vm._h('li', {
 	    staticClass: "launcher"
@@ -17401,46 +17466,6 @@ webpackJsonp([0,2],[
 	      "href": ""
 	    }
 	  }, ["Forms"])])
-	},function (){var _vm=this;
-	  return _vm._h('li', {
-	    staticClass: "active launcher"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-table icon-large"
-	  }), " ", _vm._h('a', {
-	    attrs: {
-	      "href": ""
-	    }
-	  }, ["管理员"])])
-	},function (){var _vm=this;
-	  return _vm._h('li', {
-	    staticClass: "launcher"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-table icon-large"
-	  }), " ", _vm._h('a', {
-	    attrs: {
-	      "href": ""
-	    }
-	  }, ["博文"])])
-	},function (){var _vm=this;
-	  return _vm._h('li', {
-	    staticClass: "launcher"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-table icon-large"
-	  }), " ", _vm._h('a', {
-	    attrs: {
-	      "href": ""
-	    }
-	  }, ["用户"])])
-	},function (){var _vm=this;
-	  return _vm._h('li', {
-	    staticClass: "launcher"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-table icon-large"
-	  }), " ", _vm._h('a', {
-	    attrs: {
-	      "href": ""
-	    }
-	  }, ["评论"])])
 	},function (){var _vm=this;
 	  return _vm._h('li', {
 	    staticClass: "launcher dropdown hover"
@@ -17594,7 +17619,7 @@ webpackJsonp([0,2],[
 
 
 	// module
-	exports.push([module.id, "\n\n", ""]);
+	exports.push([module.id, "\ntable {\n\t\ttable-layout: fixed;\n\t\tword-break: break-all; \n\t\tword-wrap: break-word;\n}\ntd {\n    \toverflow: hidden;\n    \twhite-space: nowrap;\n    \ttext-overflow:ellipsis;\n\t\t-o-text-overflow:ellipsis;\n\t\t-moz-text-overflow: ellipsis;\n\t\t-webkit-text-overflow: ellipsis;\n}\n", ""]);
 
 	// exports
 
@@ -17603,7 +17628,7 @@ webpackJsonp([0,2],[
 /* 42 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -17738,148 +17763,10 @@ webpackJsonp([0,2],[
 	//
 	//
 	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
 
 	exports.default = {
+		props: ['tableName', 'tableHeader', 'tableBody'],
+		mounted: function mounted() {},
 		data: function data() {
 			return {};
 		}
@@ -17890,8 +17777,6 @@ webpackJsonp([0,2],[
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
-	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;
 	  return _vm._h('div', {
 	    attrs: {
 	      "id": "content"
@@ -17902,7 +17787,21 @@ webpackJsonp([0,2],[
 	    staticClass: "panel-heading"
 	  }, [_vm._h('i', {
 	    staticClass: "icon-table icon-large"
-	  }), "\n            Default Table\n            ", _vm._h('div', {
+	  }), "\n            " + _vm._s(_vm.tableName) + "\n            ", _vm._m(0)]), " ", _vm._m(1), " ", _vm._h('table', {
+	    staticClass: "table"
+	  }, [_vm._h('thead', [_vm._h('tr', [_vm._l((_vm.tableHeader), function(item) {
+	    return _vm._h('th', [_vm._h('div', {
+	      staticClass: "td-container"
+	    }, ["\n                \t\t" + _vm._s(item) + "\n              \t\t"])])
+	  }), " ", _vm._h('th', {
+	    staticClass: "actions"
+	  }, ["\n                  Actions\n                "])])]), " ", _vm._h('tbody', [_vm._l((_vm.tableBody), function(item) {
+	    return _vm._h('tr', [_vm._l((item), function(value) {
+	      return _vm._h('td', ["\n                \t" + _vm._s(value) + "\n                "])
+	    }), " ", _vm._m(2, true)])
+	  })])]), " ", _vm._m(3)])])
+	},staticRenderFns: [function (){var _vm=this;
+	  return _vm._h('div', {
 	    staticClass: "panel-tools"
 	  }, [_vm._h('div', {
 	    staticClass: "btn-group"
@@ -17932,7 +17831,9 @@ webpackJsonp([0,2],[
 	    staticClass: "icon-refresh"
 	  })])]), " ", _vm._h('div', {
 	    staticClass: "badge"
-	  }, ["3 record"])])]), " ", _vm._h('div', {
+	  }, ["3 record"])])
+	},function (){var _vm=this;
+	  return _vm._h('div', {
 	    staticClass: "panel-body filters"
 	  }, [_vm._h('div', {
 	    staticClass: "row"
@@ -17957,13 +17858,9 @@ webpackJsonp([0,2],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-search"
-	  })])])])])])]), " ", _vm._h('table', {
-	    staticClass: "table"
-	  }, [_vm._h('thead', [_vm._h('tr', [_vm._h('th', ["#id"]), " ", _vm._h('th', ["First Name"]), " ", _vm._h('th', ["Last Name"]), " ", _vm._h('th', ["Username"]), " ", _vm._h('th', {
-	    staticClass: "actions"
-	  }, ["\n                  Actions\n                "])])]), " ", _vm._h('tbody', [_vm._h('tr', {
-	    staticClass: "success"
-	  }, [_vm._h('td', ["1"]), " ", _vm._h('td', ["Mark"]), " ", _vm._h('td', ["Otto"]), " ", _vm._h('td', ["@mdo"]), " ", _vm._h('td', {
+	  })])])])])])])
+	},function (){var _vm=this;
+	  return _vm._h('td', {
 	    staticClass: "action"
 	  }, [_vm._h('a', {
 	    staticClass: "btn btn-success",
@@ -17989,249 +17886,9 @@ webpackJsonp([0,2],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', {
-	    staticClass: "danger"
-	  }, [_vm._h('td', ["2"]), " ", _vm._h('td', ["Jacob"]), " ", _vm._h('td', ["Thornton"]), " ", _vm._h('td', ["@fat"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', {
-	    staticClass: "warning"
-	  }, [_vm._h('td', ["3"]), " ", _vm._h('td', ["Larry"]), " ", _vm._h('td', ["the Bird"]), " ", _vm._h('td', ["@twitter"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', {
-	    staticClass: "active"
-	  }, [_vm._h('td', ["4"]), " ", _vm._h('td', ["Mark"]), " ", _vm._h('td', ["Otto"]), " ", _vm._h('td', ["@mdo"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', {
-	    staticClass: "disabled"
-	  }, [_vm._h('td', ["5"]), " ", _vm._h('td', ["Jacob"]), " ", _vm._h('td', ["Thornton"]), " ", _vm._h('td', ["@fat"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', [_vm._h('td', ["6"]), " ", _vm._h('td', ["Larry"]), " ", _vm._h('td', ["the Bird"]), " ", _vm._h('td', ["@twitter"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', [_vm._h('td', ["7"]), " ", _vm._h('td', ["Jacob"]), " ", _vm._h('td', ["Thornton"]), " ", _vm._h('td', ["@fat"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', [_vm._h('td', ["8"]), " ", _vm._h('td', ["Larry"]), " ", _vm._h('td', ["the Bird"]), " ", _vm._h('td', ["@twitter"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', [_vm._h('td', ["9"]), " ", _vm._h('td', ["Mark"]), " ", _vm._h('td', ["Otto"]), " ", _vm._h('td', ["@mdo"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])]), " ", _vm._h('tr', [_vm._h('td', ["10"]), " ", _vm._h('td', ["Jacob"]), " ", _vm._h('td', ["Thornton"]), " ", _vm._h('td', ["@fat"]), " ", _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])])])]), " ", _vm._h('div', {
+	  })])])
+	},function (){var _vm=this;
+	  return _vm._h('div', {
 	    staticClass: "panel-footer"
 	  }, [_vm._h('ul', {
 	    staticClass: "pagination pagination-sm"
@@ -18279,7 +17936,7 @@ webpackJsonp([0,2],[
 	    }
 	  }, ["»"])])]), " ", _vm._h('div', {
 	    staticClass: "pull-right"
-	  }, ["\n              Showing 1 to 10 of 32 entries\n            "])])])])
+	  }, ["\n              Showing 1 to 10 of 32 entries\n            "])])
 	}]}
 	if (false) {
 	  module.hot.accept()
@@ -18303,7 +17960,7 @@ webpackJsonp([0,2],[
 	    attrs: {
 	      "id": "wrapper"
 	    }
-	  }, [_vm._h('Sidebar'), " ", _vm._h('router-view'), " "])])
+	  }, [_vm._h('Sidebar'), " ", _vm._h('router-view')])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()

@@ -1,5 +1,17 @@
 <style>
-	
+	table {
+		table-layout: fixed;
+		word-break: break-all; 
+		word-wrap: break-word;
+	}
+	td {
+    	overflow: hidden;
+    	white-space: nowrap;
+    	text-overflow:ellipsis;
+		-o-text-overflow:ellipsis;
+		-moz-text-overflow: ellipsis;
+		-webkit-text-overflow: ellipsis;
+	}
 </style>
 
 <template>
@@ -7,7 +19,7 @@
         <div class="panel panel-default grid">
           <div class="panel-heading">
             <i class="icon-table icon-large"></i>
-            Default Table
+            {{ tableName }}
             <div class="panel-tools">
               <div class="btn-group">
                 <a class="btn" href="#">
@@ -45,174 +57,22 @@
           <table class="table">
             <thead>
               <tr>
-                <th>#id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
+              	<th v-for="item in tableHeader">
+              		<div class="td-container">
+                		{{ item }}
+              		</div>
+                </th>
                 <th class="actions">
                   Actions
                 </th>
               </tr>
             </thead>
             <tbody>
-              <tr class="success">
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
+            	<!-- success/danger/warning/active/disabled -->
+              <tr v-for="item in tableBody">
+                <td v-for="value in item">
+                	{{ value }}
                 </td>
-              </tr>
-              <tr class="danger">
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="warning">
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="active">
-                <td>4</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr class="disabled">
-                <td>5</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td class="action">
-                  <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
-                    <i class="icon-zoom-in"></i>
-                  </a>
-                  <a class="btn btn-info" href="#">
-                    <i class="icon-edit"></i>
-                  </a>
-                  <a class="btn btn-danger" href="#">
-                    <i class="icon-trash"></i>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
                 <td class="action">
                   <a class="btn btn-success" data-toggle="tooltip" href="#" title="" data-original-title="Zoom">
                     <i class="icon-zoom-in"></i>
@@ -270,6 +130,9 @@
 
 <script>
 	export default {
+		props: ['tableName', 'tableHeader', 'tableBody'],
+		mounted() {
+		},
 		data() {
 			return {
 

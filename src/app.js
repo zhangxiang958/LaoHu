@@ -13,7 +13,8 @@ Vue.use(VueMdl);
 
 const router = new VueRouter({
 	base: __dirname,
-	routes: routers
+	routes: routers,
+	linkActiveClass: 'active'
 });
 
 router.beforeEach(({meta, path}, from, next) => {

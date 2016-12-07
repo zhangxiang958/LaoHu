@@ -22,31 +22,31 @@
 		<section id="sidebar">
 	        <i class="icon-align-justify icon-large" id="toggle"></i>
 	        <ul id="dock">
-	          <li class="launcher">
+	          <router-link  tag="li" to="/" class="launcher" exact>
 	            <i class="icon-dashboard"></i>
-	            <router-link to="/dashboard">控制台</router-link>
-	          </li>
+	            <a>控制台</a>
+	          </router-link>
 	          <li class="launcher">
 	            <i class="icon-file-text-alt"></i>
 	            
 	            <a href="">Forms</a>
 	          </li>
-	          <li class="active launcher">
+	          <router-link  tag="li" to="/admin" class="launcher">
 	            <i class="icon-table icon-large"></i>
-	            <a href="">管理员</a>
-	          </li>
-	          <li class="launcher">
+	            <a>管理员</a>
+	          </router-link>
+	          <router-link  tag="li" to="/article" class="launcher">
 	            <i class="icon-table icon-large"></i>
-	            <a href="">博文</a>
-	          </li>
-	          <li class="launcher">
+	            <a>博文</a>
+	          </router-link>
+	          <router-link  tag="li" to="/user" class="launcher">
 	            <i class="icon-table icon-large"></i>
-	            <a href="">用户</a>
-	          </li>
-	          <li class="launcher">
+	            <a>用户</a>
+	          </router-link>
+	          <router-link  tag="li" to="/comment" class="launcher">
 	            <i class="icon-table icon-large"></i>
-	            <a href="">评论</a>
-	          </li>
+	            <a>评论</a>
+	          </router-link>
 	          <li class="launcher dropdown hover">
 	            <i class="icon-flag"></i>
 	            <a href="#">Reports</a>
