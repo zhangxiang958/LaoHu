@@ -1,4 +1,4 @@
-webpackJsonp([0,3],[
+webpackJsonp([0,8],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -16702,40 +16702,40 @@ webpackJsonp([0,3],[
 			path: '/addData',
 			name: 'dataForm',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(8, function () {
-					resolve(__webpack_require__(113));
+				__webpack_require__.e/* nsure */(2, function () {
+					resolve(__webpack_require__(50));
 				});
 			}
 		}, {
 			path: '/admin',
 			name: 'admin',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(4, function () {
-					resolve(__webpack_require__(93));
+				__webpack_require__.e/* nsure */(3, function () {
+					resolve(__webpack_require__(55));
 				});
 			}
 		}, {
 			path: '/article',
 			name: 'article',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(5, function () {
-					resolve(__webpack_require__(98));
+				__webpack_require__.e/* nsure */(4, function () {
+					resolve(__webpack_require__(60));
 				});
 			}
 		}, {
 			path: '/user',
 			name: 'user',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(6, function () {
-					resolve(__webpack_require__(103));
+				__webpack_require__.e/* nsure */(5, function () {
+					resolve(__webpack_require__(65));
 				});
 			}
 		}, {
 			path: '/comment',
 			name: 'comment',
 			component: function component(resolve) {
-				__webpack_require__.e/* nsure */(7, function () {
-					resolve(__webpack_require__(108));
+				__webpack_require__.e/* nsure */(6, function () {
+					resolve(__webpack_require__(70));
 				});
 			}
 		}]
@@ -16743,8 +16743,8 @@ webpackJsonp([0,3],[
 		path: '/login',
 		name: 'login',
 		component: function component(resolve) {
-			__webpack_require__.e/* nsure */(2, function () {
-				resolve(__webpack_require__(50));
+			__webpack_require__.e/* nsure */(7, function () {
+				resolve(__webpack_require__(75));
 			});
 		}
 	}];
@@ -17269,7 +17269,7 @@ webpackJsonp([0,3],[
 
 
 	// module
-	exports.push([module.id, "\n.breadcrumb {\n\t\tmargin-bottom: 20px;\n    \tlist-style: none;\n    \tbackground-color: #ecf0f1;\n}\n.breadcrumb > li {\n\t\tdisplay: inline-block;\n}\n.breadcrumb>li+li:before {\n\t\tcontent: \"/\\A0\";\n    \tpadding: 0 5px;\n    \tcolor: #cccccc;\n}\n.launcher .icon-table {\n}\n", ""]);
+	exports.push([module.id, "\n.breadcrumb {\n\t\tmargin-bottom: 20px;\n    \tlist-style: none;\n    \tbackground-color: #ecf0f1;\n}\n.breadcrumb > li {\n\t\tdisplay: inline-block;\n}\n.breadcrumb > li + li:before {\n\t\tcontent: \"/\\A0\";\n    \tpadding: 0 5px;\n    \tcolor: #cccccc;\n}\n.launcher .icon-table {\n}\n", ""]);
 
 	// exports
 

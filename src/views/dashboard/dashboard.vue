@@ -1,6 +1,6 @@
 <style>
 	.dashboard-container {
-		margin: 15px 10px;
+		margin: 15px 3%;
 		min-width: 300px;
 		text-indent: 10px;
 		background-color: #cef3f5;
@@ -67,7 +67,7 @@
 <script>
 	export default {
 		mounted() {
-			
+
 		},
 		data() {
 			return {

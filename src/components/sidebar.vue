@@ -7,7 +7,7 @@
 	.breadcrumb > li {
 		display: inline-block;
 	}
-	.breadcrumb>li+li:before {
+	.breadcrumb > li + li:before {
 		content: "/\00a0";
     	padding: 0 5px;
     	color: #cccccc;

@@ -1,4 +1,4 @@
-webpackJsonp([1,3],{
+webpackJsonp([1,8],{
 
 /***/ 45:
 /***/ function(module, exports, __webpack_require__) {
@@ -83,7 +83,7 @@ webpackJsonp([1,3],{
 
 
 	// module
-	exports.push([module.id, "\n.dashboard-container {\n\tmargin: 15px 10px;\n\tmin-width: 300px;\n\ttext-indent: 10px;\n\tbackground-color: #cef3f5;\n\tcolor: #000;\n\tfont-weight: 900;\n\tfont-size: 30px;\n\tline-height: 80px;\n\tvertical-align: middle;\n}\n.useage-container {\n\toverflow: hidden;\n}\n.dashboard-tag {\n\tmargin-left: -15px;\n\tfloat: left;\n\twidth: 30%;\n\tbackground-color: #5ba0a3;\n\tline-height: 80px;\n\tcolor: #fff;\n\tfont-size: 20px;\n\ttext-align: center;\n\ttext-indent: 0;\n}\n", ""]);
+	exports.push([module.id, "\n.dashboard-container {\n\tmargin: 15px 3%;\n\tmin-width: 300px;\n\ttext-indent: 10px;\n\tbackground-color: #cef3f5;\n\tcolor: #000;\n\tfont-weight: 900;\n\tfont-size: 30px;\n\tline-height: 80px;\n\tvertical-align: middle;\n}\n.useage-container {\n\toverflow: hidden;\n}\n.dashboard-tag {\n\tmargin-left: -15px;\n\tfloat: left;\n\twidth: 30%;\n\tbackground-color: #5ba0a3;\n\tline-height: 80px;\n\tcolor: #fff;\n\tfont-size: 20px;\n\ttext-align: center;\n\ttext-indent: 0;\n}\n", ""]);
 
 	// exports
 
