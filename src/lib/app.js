@@ -17774,6 +17774,19 @@ webpackJsonp([0,8],[
 		mounted: function mounted() {},
 		data: function data() {
 			return {};
+		},
+
+		methods: {
+			check: function check(index) {
+				console.log(index);
+				this.$emit("details", index);
+			},
+			edit: function edit(index) {
+				this.$emit('edit', index);
+			},
+			deleteItem: function deleteItem(index) {
+				this.$emit('delete', index);
+			}
 		}
 	};
 
@@ -17792,19 +17805,53 @@ webpackJsonp([0,8],[
 	    staticClass: "panel-heading"
 	  }, [_vm._h('i', {
 	    staticClass: "icon-table icon-large"
-	  }), "\n            " + _vm._s(_vm.tableName) + "\n            ", _vm._m(0)]), " ", _vm._m(1), " ", _vm._h('table', {
-	    staticClass: "table"
+	  }), "\n        " + _vm._s(_vm.tableName) + "\n        ", _vm._m(0)]), " ", _vm._m(1), " ", _vm._h('table', {
+	    staticClass: "table table-bordered"
 	  }, [_vm._h('thead', [_vm._h('tr', [_vm._l((_vm.tableHeader), function(item) {
 	    return _vm._h('th', [_vm._h('div', {
 	      staticClass: "td-container"
-	    }, ["\n                \t\t" + _vm._s(item) + "\n              \t\t"])])
+	    }, ["\n            \t\t" + _vm._s(item) + "\n          \t\t"])])
 	  }), " ", _vm._h('th', {
 	    staticClass: "actions"
-	  }, ["\n                  Actions\n                "])])]), " ", _vm._h('tbody', [_vm._l((_vm.tableBody), function(item) {
+	  }, ["\n              Actions\n            "])])]), " ", _vm._h('tbody', [_vm._l((_vm.tableBody), function(item, index) {
 	    return _vm._h('tr', [_vm._l((item), function(value) {
-	      return _vm._h('td', ["\n                \t" + _vm._s(value) + "\n                "])
-	    }), " ", _vm._m(2, true)])
-	  })])]), " ", _vm._m(3)])])
+	      return _vm._h('td', ["\n            \t" + _vm._s(value) + "\n            "])
+	    }), " ", _vm._h('td', {
+	      staticClass: "action"
+	    }, [_vm._h('a', {
+	      staticClass: "btn btn-success",
+	      attrs: {
+	        "data-toggle": "tooltip",
+	        "title": "",
+	        "data-original-title": "Zoom"
+	      },
+	      on: {
+	        "click": function($event) {
+	          _vm.check(index)
+	        }
+	      }
+	    }, [_vm._h('i', {
+	      staticClass: "icon-zoom-in"
+	    })]), " ", _vm._h('a', {
+	      staticClass: "btn btn-info",
+	      on: {
+	        "click": function($event) {
+	          _vm.edit(index)
+	        }
+	      }
+	    }, [_vm._h('i', {
+	      staticClass: "icon-edit"
+	    })]), " ", _vm._h('a', {
+	      staticClass: "btn btn-danger",
+	      on: {
+	        "click": function($event) {
+	          _vm.deleteItem(index)
+	        }
+	      }
+	    }, [_vm._h('i', {
+	      staticClass: "icon-trash"
+	    })])])])
+	  })])]), " "])])
 	},staticRenderFns: [function (){var _vm=this;
 	  return _vm._h('div', {
 	    staticClass: "panel-tools"
@@ -17817,14 +17864,14 @@ webpackJsonp([0,8],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-wrench"
-	  }), "\n                  Settings\n                "]), " ", _vm._h('a', {
+	  }), "\n              Settings\n            "]), " ", _vm._h('a', {
 	    staticClass: "btn",
 	    attrs: {
 	      "href": "#"
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-filter"
-	  }), "\n                  Filters\n                "]), " ", _vm._h('a', {
+	  }), "\n              Filters\n            "]), " ", _vm._h('a', {
 	    staticClass: "btn",
 	    attrs: {
 	      "data-toggle": "toolbar-tooltip",
@@ -17834,9 +17881,7 @@ webpackJsonp([0,8],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-refresh"
-	  })])]), " ", _vm._h('div', {
-	    staticClass: "badge"
-	  }, ["3 record"])])
+	  })])]), " "])
 	},function (){var _vm=this;
 	  return _vm._h('div', {
 	    staticClass: "panel-body filters"
@@ -17844,7 +17889,7 @@ webpackJsonp([0,8],[
 	    staticClass: "row"
 	  }, [_vm._h('div', {
 	    staticClass: "col-md-9"
-	  }, ["\n                Add your custom filters here...\n              "]), " ", _vm._h('div', {
+	  }, ["\n            Add your custom filters here...\n          "]), " ", _vm._h('div', {
 	    staticClass: "col-md-3"
 	  }, [_vm._h('div', {
 	    staticClass: "input-group"
@@ -17864,84 +17909,6 @@ webpackJsonp([0,8],[
 	  }, [_vm._h('i', {
 	    staticClass: "icon-search"
 	  })])])])])])])
-	},function (){var _vm=this;
-	  return _vm._h('td', {
-	    staticClass: "action"
-	  }, [_vm._h('a', {
-	    staticClass: "btn btn-success",
-	    attrs: {
-	      "data-toggle": "tooltip",
-	      "href": "#",
-	      "title": "",
-	      "data-original-title": "Zoom"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-zoom-in"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-info",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit"
-	  })]), " ", _vm._h('a', {
-	    staticClass: "btn btn-danger",
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, [_vm._h('i', {
-	    staticClass: "icon-trash"
-	  })])])
-	},function (){var _vm=this;
-	  return _vm._h('div', {
-	    staticClass: "panel-footer"
-	  }, [_vm._h('ul', {
-	    staticClass: "pagination pagination-sm"
-	  }, [_vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["«"])]), " ", _vm._h('li', {
-	    staticClass: "active"
-	  }, [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["1"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["2"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["3"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["4"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["5"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["6"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["7"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["8"])]), " ", _vm._h('li', [_vm._h('a', {
-	    attrs: {
-	      "href": "#"
-	    }
-	  }, ["»"])])]), " ", _vm._h('div', {
-	    staticClass: "pull-right"
-	  }, ["\n              Showing 1 to 10 of 32 entries\n            "])])
 	}]}
 	if (false) {
 	  module.hot.accept()
