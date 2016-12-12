@@ -4,7 +4,11 @@
 
 <template>
 	<div>
-		<DataTable tableName="评论表" :tableHeader="tableHeader"  :tableBody="tableBody" />
+		<DataTable 
+			tableName="评论表" 
+			:tableHeader="tableHeader"  
+			:tableBody="tableBody" 
+		/>
 	</div>
 </template>
 

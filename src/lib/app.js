@@ -16719,7 +16719,7 @@ webpackJsonp([0,8],[
 			name: 'article',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(4, function () {
-					resolve(__webpack_require__(60));
+					resolve(__webpack_require__(65));
 				});
 			}
 		}, {
@@ -16727,7 +16727,7 @@ webpackJsonp([0,8],[
 			name: 'user',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(5, function () {
-					resolve(__webpack_require__(65));
+					resolve(__webpack_require__(70));
 				});
 			}
 		}, {
@@ -16735,7 +16735,7 @@ webpackJsonp([0,8],[
 			name: 'comment',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(6, function () {
-					resolve(__webpack_require__(70));
+					resolve(__webpack_require__(75));
 				});
 			}
 		}]
@@ -16744,7 +16744,7 @@ webpackJsonp([0,8],[
 		name: 'login',
 		component: function component(resolve) {
 			__webpack_require__.e/* nsure */(7, function () {
-				resolve(__webpack_require__(75));
+				resolve(__webpack_require__(80));
 			});
 		}
 	}];

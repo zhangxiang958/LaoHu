@@ -18,6 +18,7 @@
 			:notChecking="notChecking" 
 			:toEdit="toEdit" 
 			v-on:toBack="toBack"
+			v-on:saveIt="saveIt"
 		/>
 	</div>
 </template>
@@ -58,6 +59,23 @@
 			},
 			toBack() {
 				this.notChecking = true;
+			},
+			saveIt(data) {
+				this.$http.put('http://localhost:18081/api/user/editUser/' + data.member_id, data,{
+							emulateJSON: true
+						}).then((response) => {
+			
+					console.log(response);
+					console.log(response.data);
+					if(response.data.code === 0) {
+
+						alert("修改成功");
+						this.toBack();
+					} else {
+						
+						alert("修改失败");
+					}
+				});
 			}
 		},
 		components: {

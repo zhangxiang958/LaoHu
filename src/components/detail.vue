@@ -29,6 +29,9 @@
 	    -ms-user-select: none;
 	    user-select: none;
 	}
+	.form-group textarea {
+		resize: none;
+	}
 </style>
 
 <template>
@@ -43,9 +46,9 @@
             <form>
               <fieldset>
                 <legend>Default Inputs</legend>
-                <div class="form-group" v-for="(val, key) in itemData">
+                <div class="form-group" v-for="(val, key, index) in itemData">
                 	<label class="control-label">{{ key }}</label>
-                  	<input class="form-control" placeholder="null" type="text" :value="val" :disabled="!toEdit" v-if="val.length < 300">
+                  	<input class="form-control" placeholder="null" type="text" :value="val" :disabled="!toEdit || index == 0" v-if="val.toString().length < 300" v-on:input="changeValue($event, key)">                	
                   	<textarea class="form-control" rows="4" :value="val" :disabled="!toEdit" v-else ></textarea>
                 </div>
                <!--  <div class="form-group">
@@ -121,17 +124,36 @@
 <script>
 	export default {
 		props: ['tableTitle', 'itemData', "notChecking", 'toEdit'],
+		mounted() {
+		},
 		data() {
 			return {
-
+				editItem: {}
 			}
 		},
 		methods: {
+			changeValue(event, key) {
+				this.editItem = this.itemData;
+				// console.log(event);
+				// console.log(event.target.value);
+				// console.log(key);
+				// console.log(this.editItem[key]);
+
+				this.editItem[key] = event.target.value;
+
+				console.log(this.editItem);
+			},
 			toBack() {
 				this.$emit('toBack');
 			},
 			saveIt() {
-				this.$emit('saveIt');
+				//对象判空
+				if(JSON.stringify(this.editItem) == "{}") {
+					alert("请修改数据项");
+					return;
+				} else {
+					this.$emit('saveIt', this.editItem);
+				}
 			}
 		}
 	}
