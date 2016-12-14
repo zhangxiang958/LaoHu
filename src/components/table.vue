@@ -12,6 +12,9 @@
 		-moz-text-overflow: ellipsis;
 		-webkit-text-overflow: ellipsis;
 	}
+  .icon-add:before {
+    content: "\f0f6";
+  }
 </style>
 
 <template>
@@ -22,11 +25,15 @@
         {{ tableName }}
         <div class="panel-tools">
           <div class="btn-group">
-            <a class="btn" href="#">
+            <a class="btn" @click="addItem">
+              <i class="icon-wrench icon-add"></i>
+              添加数据
+            </a>
+            <a class="btn">
               <i class="icon-wrench"></i>
               Settings
             </a>
-            <a class="btn" href="#">
+            <a class="btn">
               <i class="icon-filter"></i>
               Filters
             </a>
@@ -69,7 +76,7 @@
         </thead>
         <tbody>
         	<!-- success/danger/warning/active/disabled -->
-          <tr v-for="(item, index ) in tableBody">
+          <tr v-for="(item, index) in tableBody">
             <td v-for="value in item">
             	{{ value }}
             </td>
@@ -144,6 +151,9 @@
         console.log(index);
 				this.$emit("details", index);
 			},
+      addItem(){
+        this.$emit('addItem');
+      },
 			edit(index) {
 				this.$emit('edit', index);
 			},

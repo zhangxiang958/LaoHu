@@ -16719,7 +16719,7 @@ webpackJsonp([0,8],[
 			name: 'article',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(4, function () {
-					resolve(__webpack_require__(65));
+					resolve(__webpack_require__(67));
 				});
 			}
 		}, {
@@ -16727,7 +16727,7 @@ webpackJsonp([0,8],[
 			name: 'user',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(5, function () {
-					resolve(__webpack_require__(70));
+					resolve(__webpack_require__(72));
 				});
 			}
 		}, {
@@ -16735,7 +16735,7 @@ webpackJsonp([0,8],[
 			name: 'comment',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(6, function () {
-					resolve(__webpack_require__(75));
+					resolve(__webpack_require__(77));
 				});
 			}
 		}]
@@ -16744,7 +16744,7 @@ webpackJsonp([0,8],[
 		name: 'login',
 		component: function component(resolve) {
 			__webpack_require__.e/* nsure */(7, function () {
-				resolve(__webpack_require__(80));
+				resolve(__webpack_require__(82));
 			});
 		}
 	}];
@@ -16833,7 +16833,7 @@ webpackJsonp([0,8],[
 
 
 	// module
-	exports.push([module.id, "\n\n", ""]);
+	exports.push([module.id, "\n#content {\n\tmin-width: 960px;\n}\n", ""]);
 
 	// exports
 
@@ -17154,14 +17154,16 @@ webpackJsonp([0,8],[
 	//
 	//
 	//
+	//
+	//
 
 	exports.default = {
 		created: function created() {
-			console.log("created");
+			// console.log("created");
 		},
 		mounted: function mounted() {
-			console.log("mounted");
-			console.log(this.$el);
+			// console.log("mounted");
+			// console.log(this.$el);
 		},
 		data: function data() {
 			return {
@@ -17624,7 +17626,7 @@ webpackJsonp([0,8],[
 
 
 	// module
-	exports.push([module.id, "\ntable {\n\t\ttable-layout: fixed;\n\t\tword-break: break-all; \n\t\tword-wrap: break-word;\n}\ntd {\n    \toverflow: hidden;\n    \twhite-space: nowrap;\n    \ttext-overflow:ellipsis;\n\t\t-o-text-overflow:ellipsis;\n\t\t-moz-text-overflow: ellipsis;\n\t\t-webkit-text-overflow: ellipsis;\n}\n", ""]);
+	exports.push([module.id, "\ntable {\n\t\ttable-layout: fixed;\n\t\tword-break: break-all; \n\t\tword-wrap: break-word;\n}\ntd {\n    \toverflow: hidden;\n    \twhite-space: nowrap;\n    \ttext-overflow:ellipsis;\n\t\t-o-text-overflow:ellipsis;\n\t\t-moz-text-overflow: ellipsis;\n\t\t-webkit-text-overflow: ellipsis;\n}\n.icon-add:before {\n    content: \"\\F0F6\";\n}\n", ""]);
 
 	// exports
 
@@ -17768,6 +17770,13 @@ webpackJsonp([0,8],[
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 		props: ['tableName', 'tableHeader', 'tableBody'],
@@ -17780,6 +17789,9 @@ webpackJsonp([0,8],[
 			check: function check(index) {
 				console.log(index);
 				this.$emit("details", index);
+			},
+			addItem: function addItem() {
+				this.$emit('addItem');
 			},
 			edit: function edit(index) {
 				this.$emit('edit', index);
@@ -17805,7 +17817,18 @@ webpackJsonp([0,8],[
 	    staticClass: "panel-heading"
 	  }, [_vm._h('i', {
 	    staticClass: "icon-table icon-large"
-	  }), "\n        " + _vm._s(_vm.tableName) + "\n        ", _vm._m(0)]), " ", _vm._m(1), " ", _vm._h('table', {
+	  }), "\n        " + _vm._s(_vm.tableName) + "\n        ", _vm._h('div', {
+	    staticClass: "panel-tools"
+	  }, [_vm._h('div', {
+	    staticClass: "btn-group"
+	  }, [_vm._h('a', {
+	    staticClass: "btn",
+	    on: {
+	      "click": _vm.addItem
+	    }
+	  }, [_vm._h('i', {
+	    staticClass: "icon-wrench icon-add"
+	  }), "\n              添加数据\n            "]), " ", _vm._m(0), " ", _vm._m(1), " ", _vm._m(2)]), " "])]), " ", _vm._m(3), " ", _vm._h('table', {
 	    staticClass: "table table-bordered"
 	  }, [_vm._h('thead', [_vm._h('tr', [_vm._l((_vm.tableHeader), function(item) {
 	    return _vm._h('th', [_vm._h('div', {
@@ -17853,25 +17876,19 @@ webpackJsonp([0,8],[
 	    })])])])
 	  })])]), " "])])
 	},staticRenderFns: [function (){var _vm=this;
-	  return _vm._h('div', {
-	    staticClass: "panel-tools"
-	  }, [_vm._h('div', {
-	    staticClass: "btn-group"
-	  }, [_vm._h('a', {
-	    staticClass: "btn",
-	    attrs: {
-	      "href": "#"
-	    }
+	  return _vm._h('a', {
+	    staticClass: "btn"
 	  }, [_vm._h('i', {
 	    staticClass: "icon-wrench"
-	  }), "\n              Settings\n            "]), " ", _vm._h('a', {
-	    staticClass: "btn",
-	    attrs: {
-	      "href": "#"
-	    }
+	  }), "\n              Settings\n            "])
+	},function (){var _vm=this;
+	  return _vm._h('a', {
+	    staticClass: "btn"
 	  }, [_vm._h('i', {
 	    staticClass: "icon-filter"
-	  }), "\n              Filters\n            "]), " ", _vm._h('a', {
+	  }), "\n              Filters\n            "])
+	},function (){var _vm=this;
+	  return _vm._h('a', {
 	    staticClass: "btn",
 	    attrs: {
 	      "data-toggle": "toolbar-tooltip",
@@ -17881,7 +17898,7 @@ webpackJsonp([0,8],[
 	    }
 	  }, [_vm._h('i', {
 	    staticClass: "icon-refresh"
-	  })])]), " "])
+	  })])
 	},function (){var _vm=this;
 	  return _vm._h('div', {
 	    staticClass: "panel-body filters"
@@ -17922,13 +17939,7 @@ webpackJsonp([0,8],[
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', ["\n\t\t" + _vm._s(_vm.message) + "\n\t\t" + _vm._s(_vm.count) + "\n\t\t", _vm._h('mdl-button', {
-	    nativeOn: {
-	      "click": function($event) {
-	        _vm.testMdl($event)
-	      }
-	    }
-	  }, ["asdjakl"]), " ", _vm._h('div', {
+	  return _vm._h('div', [_vm._h('div', {
 	    attrs: {
 	      "id": "wrapper"
 	    }

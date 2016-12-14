@@ -1,12 +1,14 @@
 <style>
-
+	#content {
+		min-width: 960px;
+	}
 </style>
 
 <template>
 	<div>
-		{{message}}
-		{{count}}
-		<mdl-button @click.native="testMdl">asdjakl</mdl-button>
+<!-- 		{{message}}
+		{{count}} -->
+		<!-- <mdl-button @click.native="testMdl">asdjakl</mdl-button> -->
 		
 		<div id="wrapper">
       	<!-- Sidebar -->
@@ -22,11 +24,11 @@
 
 	export default {
 		created() {
-			console.log("created");
+			// console.log("created");
 		},
 		mounted() {
-			console.log("mounted");
-			console.log(this.$el);
+			// console.log("mounted");
+			// console.log(this.$el);
 		},
 		data() {
 			return {

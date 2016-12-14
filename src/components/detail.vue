@@ -49,7 +49,7 @@
                 <div class="form-group" v-for="(val, key, index) in itemData">
                 	<label class="control-label">{{ key }}</label>
                   	<input class="form-control" placeholder="null" type="text" :value="val" :disabled="!toEdit || index == 0" v-if="val.toString().length < 300" v-on:input="changeValue($event, key)">                	
-                  	<textarea class="form-control" rows="4" :value="val" :disabled="!toEdit" v-else ></textarea>
+                  	<textarea class="form-control" rows="4" :value="val" :disabled="!toEdit" v-else v-on:input="changeValue($event, key)"></textarea>
                 </div>
                <!--  <div class="form-group">
                   <label class="control-label">Textarea field</label>
