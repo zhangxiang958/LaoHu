@@ -8,7 +8,7 @@
 	<div>
 <!-- 		{{message}}
 		{{count}} -->
-		<!-- <mdl-button @click.native="testMdl">asdjakl</mdl-button> -->
+		<mdl-button @click.native="testMdl">asdjakl</mdl-button>
 		
 		<div id="wrapper">
       	<!-- Sidebar -->

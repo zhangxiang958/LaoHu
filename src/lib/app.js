@@ -16719,7 +16719,7 @@ webpackJsonp([0,8],[
 			name: 'article',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(4, function () {
-					resolve(__webpack_require__(67));
+					resolve(__webpack_require__(110));
 				});
 			}
 		}, {
@@ -16727,7 +16727,7 @@ webpackJsonp([0,8],[
 			name: 'user',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(5, function () {
-					resolve(__webpack_require__(72));
+					resolve(__webpack_require__(115));
 				});
 			}
 		}, {
@@ -16735,7 +16735,7 @@ webpackJsonp([0,8],[
 			name: 'comment',
 			component: function component(resolve) {
 				__webpack_require__.e/* nsure */(6, function () {
-					resolve(__webpack_require__(77));
+					resolve(__webpack_require__(120));
 				});
 			}
 		}]
@@ -16744,7 +16744,7 @@ webpackJsonp([0,8],[
 		name: 'login',
 		component: function component(resolve) {
 			__webpack_require__.e/* nsure */(7, function () {
-				resolve(__webpack_require__(82));
+				resolve(__webpack_require__(125));
 			});
 		}
 	}];
@@ -17939,7 +17939,13 @@ webpackJsonp([0,8],[
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', [_vm._h('div', {
+	  return _vm._h('div', [_vm._h('mdl-button', {
+	    nativeOn: {
+	      "click": function($event) {
+	        _vm.testMdl($event)
+	      }
+	    }
+	  }, ["asdjakl"]), " ", _vm._h('div', {
 	    attrs: {
 	      "id": "wrapper"
 	    }

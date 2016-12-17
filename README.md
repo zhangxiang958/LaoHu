@@ -22,4 +22,5 @@
 ###vuex
 放置 store ， actions， mutations， state
 
-
+##ISSUE
+Vue and vue-template-compiler should use 2.1.0 if you want to use the vue-mdl

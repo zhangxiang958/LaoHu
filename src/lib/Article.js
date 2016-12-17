@@ -371,20 +371,279 @@ webpackJsonp([4,8],{
 
 /***/ },
 
-/***/ 67:
+/***/ 66:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = {}
 
 	/* styles */
-	__webpack_require__(68)
+	__webpack_require__(67)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(70)
+	__vue_exports__ = __webpack_require__(69)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(71)
+	var __vue_template__ = __webpack_require__(70)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/home/jarvis/Workspace/knowledgeSystem/app/src/components/addItem.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-6fbada7b", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-6fbada7b", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] addItem.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 67:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(68);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(32)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6fbada7b!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addItem.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6fbada7b!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addItem.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 68:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(31)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n.addItem {\n\tdisplay: block;\n\tz-index: 999;\n}\n.hideAdd {\n\tdisplay: none;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 69:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _stringify = __webpack_require__(63);
+
+	var _stringify2 = _interopRequireDefault(_stringify);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+		props: ['tableHeader', "notAdding"],
+		mounted: function mounted() {},
+		data: function data() {
+			return {
+				editItem: {}
+			};
+		},
+
+		methods: {
+			changeValue: function changeValue(event, key) {
+				this.editItem = this.tableHeader;
+				// console.log(event);
+				// console.log(event.target.value);
+				// console.log(key);
+				// console.log(this.editItem[key]);
+
+				this.editItem[key] = event.target.value;
+
+				console.log(this.editItem);
+			},
+			toBack: function toBack() {
+				this.$emit('toBack');
+			},
+			addThis: function addThis() {
+				if ((0, _stringify2.default)(this.editItem) == "{}") {
+					alert("请修改数据项");
+					return;
+				} else {
+					this.$emit('add', this.editItem);
+				}
+			}
+		}
+	};
+
+/***/ },
+
+/***/ 70:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;
+	  return _vm._h('div', {
+	    staticClass: "addItem",
+	    class: {
+	      hideAdd: _vm.notAdding
+	    },
+	    attrs: {
+	      "id": "content"
+	    }
+	  }, [_vm._h('a', {
+	    staticClass: "back",
+	    on: {
+	      "click": _vm.toBack
+	    }
+	  }, [" backToTable "]), " ", _vm._h('div', {
+	    staticClass: "panel panel-default"
+	  }, [_vm._h('div', {
+	    staticClass: "panel-heading"
+	  }, [_vm._h('i', {
+	    staticClass: "icon-edit icon-large"
+	  }), "\n            " + _vm._s(_vm.tableTitle) + "\n          "]), " ", _vm._h('div', {
+	    staticClass: "panel-body"
+	  }, [_vm._h('form', [_vm._h('fieldset', [_vm._h('legend', ["Default Inputs"]), " ", _vm._l((_vm.tableHeader), function(val, key) {
+	    return _vm._h('div', {
+	      staticClass: "form-group"
+	    }, [_vm._h('label', {
+	      staticClass: "control-label"
+	    }, [_vm._s(key)]), " ", (key == '') ? _vm._h('textarea', {
+	      staticClass: "form-control",
+	      attrs: {
+	        "rows": "4"
+	      },
+	      on: {
+	        "input": function($event) {
+	          _vm.changeValue($event, key)
+	        }
+	      }
+	    }) : _vm._h('input', {
+	      staticClass: "form-control",
+	      attrs: {
+	        "placeholder": "null",
+	        "type": "text"
+	      },
+	      on: {
+	        "input": function($event) {
+	          _vm.changeValue($event, key)
+	        }
+	      }
+	    }), " "])
+	  })]), " ", _vm._h('div', {
+	    staticClass: "form-actions"
+	  }, [_vm._h('button', {
+	    staticClass: "btn btn-default",
+	    attrs: {
+	      "type": "submit"
+	    },
+	    on: {
+	      "click": _vm.addThis
+	    }
+	  }, ["Submit"]), " ", _vm._h('a', {
+	    staticClass: "btn",
+	    on: {
+	      "click": _vm.toBack
+	    }
+	  }, ["Cancel"])])])])])])
+	},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-6fbada7b", module.exports)
+	  }
+	}
+
+/***/ },
+
+/***/ 110:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+
+	/* styles */
+	__webpack_require__(111)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(113)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(114)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -419,13 +678,13 @@ webpackJsonp([4,8],{
 
 /***/ },
 
-/***/ 68:
+/***/ 111:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(69);
+	var content = __webpack_require__(112);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(32)(content, {});
@@ -446,7 +705,7 @@ webpackJsonp([4,8],{
 
 /***/ },
 
-/***/ 69:
+/***/ 112:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(31)();
@@ -461,7 +720,7 @@ webpackJsonp([4,8],{
 
 /***/ },
 
-/***/ 70:
+/***/ 113:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -478,7 +737,7 @@ webpackJsonp([4,8],{
 
 	var _detail2 = _interopRequireDefault(_detail);
 
-	var _addItem = __webpack_require__(125);
+	var _addItem = __webpack_require__(66);
 
 	var _addItem2 = _interopRequireDefault(_addItem);
 
@@ -639,7 +898,7 @@ webpackJsonp([4,8],{
 
 /***/ },
 
-/***/ 71:
+/***/ 114:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
@@ -681,265 +940,6 @@ webpackJsonp([4,8],{
 	  module.hot.accept()
 	  if (module.hot.data) {
 	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-25688268", module.exports)
-	  }
-	}
-
-/***/ },
-
-/***/ 125:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-
-	/* styles */
-	__webpack_require__(126)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(128)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(129)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/home/jarvis/Workspace/knowledgeSystem/app/src/components/addItem.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-6fbada7b", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-6fbada7b", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] addItem.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-
-	module.exports = __vue_exports__
-
-
-/***/ },
-
-/***/ 126:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(127);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(32)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6fbada7b!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addItem.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-6fbada7b!./../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./addItem.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 127:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(31)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n.addItem {\n\tdisplay: block;\n\tz-index: 999;\n}\n.hideAdd {\n\tdisplay: none;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 128:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _stringify = __webpack_require__(63);
-
-	var _stringify2 = _interopRequireDefault(_stringify);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	exports.default = {
-		props: ['tableHeader', "notAdding"],
-		mounted: function mounted() {},
-		data: function data() {
-			return {
-				editItem: {}
-			};
-		},
-
-		methods: {
-			changeValue: function changeValue(event, key) {
-				this.editItem = this.tableHeader;
-				// console.log(event);
-				// console.log(event.target.value);
-				// console.log(key);
-				// console.log(this.editItem[key]);
-
-				this.editItem[key] = event.target.value;
-
-				console.log(this.editItem);
-			},
-			toBack: function toBack() {
-				this.$emit('toBack');
-			},
-			addThis: function addThis() {
-				if ((0, _stringify2.default)(this.editItem) == "{}") {
-					alert("请修改数据项");
-					return;
-				} else {
-					this.$emit('add', this.editItem);
-				}
-			}
-		}
-	};
-
-/***/ },
-
-/***/ 129:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports={render:function (){var _vm=this;
-	  return _vm._h('div', {
-	    staticClass: "addItem",
-	    class: {
-	      hideAdd: _vm.notAdding
-	    },
-	    attrs: {
-	      "id": "content"
-	    }
-	  }, [_vm._h('a', {
-	    staticClass: "back",
-	    on: {
-	      "click": _vm.toBack
-	    }
-	  }, [" backToTable "]), " ", _vm._h('div', {
-	    staticClass: "panel panel-default"
-	  }, [_vm._h('div', {
-	    staticClass: "panel-heading"
-	  }, [_vm._h('i', {
-	    staticClass: "icon-edit icon-large"
-	  }), "\n            " + _vm._s(_vm.tableTitle) + "\n          "]), " ", _vm._h('div', {
-	    staticClass: "panel-body"
-	  }, [_vm._h('form', [_vm._h('fieldset', [_vm._h('legend', ["Default Inputs"]), " ", _vm._l((_vm.tableHeader), function(val, key) {
-	    return _vm._h('div', {
-	      staticClass: "form-group"
-	    }, [_vm._h('label', {
-	      staticClass: "control-label"
-	    }, [_vm._s(key)]), " ", (key == '') ? _vm._h('textarea', {
-	      staticClass: "form-control",
-	      attrs: {
-	        "rows": "4"
-	      },
-	      on: {
-	        "input": function($event) {
-	          _vm.changeValue($event, key)
-	        }
-	      }
-	    }) : _vm._h('input', {
-	      staticClass: "form-control",
-	      attrs: {
-	        "placeholder": "null",
-	        "type": "text"
-	      },
-	      on: {
-	        "input": function($event) {
-	          _vm.changeValue($event, key)
-	        }
-	      }
-	    }), " "])
-	  })]), " ", _vm._h('div', {
-	    staticClass: "form-actions"
-	  }, [_vm._h('button', {
-	    staticClass: "btn btn-default",
-	    attrs: {
-	      "type": "submit"
-	    },
-	    on: {
-	      "click": _vm.addThis
-	    }
-	  }, ["Submit"]), " ", _vm._h('a', {
-	    staticClass: "btn",
-	    on: {
-	      "click": _vm.toBack
-	    }
-	  }, ["Cancel"])])])])])])
-	},staticRenderFns: []}
-	if (false) {
-	  module.hot.accept()
-	  if (module.hot.data) {
-	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-6fbada7b", module.exports)
 	  }
 	}
 
